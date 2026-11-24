@@ -151,11 +151,13 @@ FindIt/
 │   ├── landing.css         # Styles specific to index.html (hero, stats, process cards)
 │   ├── dashboard.css       # Styles for filter controls, grid layout, and item cards
 │   ├── forms.css           # Form controls, validation states, toggles, and modal dialogs
+│   ├── item-details.css    # Two-column layout, custody steps, and claim request styling
 │   └── responsive.css      # Consolidated media queries for mobile, tablet, and desktop
 ├── js/
 │   ├── main.js             # Shared logic: mobile nav toggle, notifications, global utilities
 │   ├── dashboard.js        # Item dataset, rendering engine, search, filter, and sort logic
-│   └── forms.js            # Form submission handling, validation, localStorage sync, claim modal
+│   ├── forms.js            # Form submission handling, validation, localStorage sync, claim modal
+│   └── item-details.js     # URL query parameter parsing, dynamic item rendering, claim submission
 ├── assets/
 │   ├── images/             # Placeholder imagery for campus locations and sample items
 │   └── icons/              # Lightweight SVG icons for categories, navigation, and badges

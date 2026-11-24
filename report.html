@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Report a Lost or Found Item on FindIt. Help reconnect personal belongings across our college campus.">
+  <title>Report an Item – FindIt Campus Platform</title>
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Dedicated Forms Stylesheet -->
+  <link rel="stylesheet" href="css/forms.css">
+  <!-- Landing / Shared Stylesheet (Navbar & Footer) -->
+  <link rel="stylesheet" href="css/landing.css">
+  <!-- Consolidated Responsive Stylesheet -->
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       1. Navigation Bar
+       ====================================================================== -->
+  <header class="navbar" role="banner">
+    <div class="container navbar-container">
+      <!-- FindIt Brand Logo -->
+      <a href="index.html" class="nav-brand" aria-label="FindIt Campus Platform Home">
+        <img src="assets/icons/findit-logo.png" alt="FindIt Logo" class="nav-brand-logo" width="36" height="36">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">FindIt</span>
+          <span class="nav-brand-tagline">Campus Lost &amp; Found</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Locate It</a>
+        <a href="report.html" class="nav-link active" aria-current="page">Report It</a>
+        <a href="closed-reports.html" class="nav-link">Closed Reports</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Desktop Action CTA -->
+      <div class="nav-actions">
+        <a href="dashboard.html" class="btn btn-outline btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          Dashboard Feed
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavMenu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-in Drawer & Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-menu" id="mobileNavMenu" role="dialog" aria-label="Mobile Navigation Menu">
+    <div class="mobile-nav-header">
+      <div class="nav-brand">
+        <img src="assets/icons/findit-logo.png" alt="FindIt Logo" class="nav-brand-logo" width="32" height="32">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">FindIt</span>
+          <span class="nav-brand-tagline">Campus Platform</span>
+        </div>
+      </div>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="dashboard.html" class="mobile-nav-link">Locate It</a>
+      <a href="report.html" class="mobile-nav-link active" aria-current="page">Report It</a>
+      <a href="closed-reports.html" class="mobile-nav-link">Closed Reports</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    </nav>
+    <div class="mobile-nav-actions">
+      <a href="dashboard.html" class="btn btn-primary btn-block">
+        Open Dashboard
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ======================================================================
+         2. Page Header
+         ====================================================================== -->
+    <section class="report-hero-section" aria-labelledby="report-heading">
+      <div class="container">
+        <div class="report-hero-content">
+          <span class="section-tag">Campus Item Registration</span>
+          <h1 id="report-heading" class="report-main-title">Report an Item</h1>
+          <p class="report-subtitle">
+            Help reconnect lost belongings with their rightful owners.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. Main Form Section
+         ====================================================================== -->
+    <section class="report-form-section" aria-label="Item Registration Form Container">
+      <div class="container">
+        <div class="report-card-wrapper">
+          
+          <div class="report-card">
+            
+            <form id="reportItemForm" novalidate>
+              
+              <!-- SECTION A: Report Type Selection (2 Cards) -->
+              <div class="form-group">
+                <span class="type-selector-label">What would you like to report?</span>
+                
+                <div class="type-selector-grid" role="radiogroup" aria-label="Select report type">
+                  
+                  <!-- Option 1: Missing Item -->
+                  <label class="type-choice-card is-active type-missing" for="typeMissing">
+                    <input 
+                      type="radio" 
+                      id="typeMissing" 
+                      name="reportType" 
+                      value="missing" 
+                      class="type-choice-radio" 
+                      checked>
+                    <div class="type-icon-box type-icon-missing" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                      </svg>
+                    </div>
+                    <div class="type-content">
+                      <span class="type-title">Report a Missing Item</span>
+                      <span class="type-desc">I misplaced or lost my belonging on campus.</span>
+                    </div>
+                  </label>
+
+                  <!-- Option 2: Found Item -->
+                  <label class="type-choice-card type-found" for="typeFound">
+                    <input 
+                      type="radio" 
+                      id="typeFound" 
+                      name="reportType" 
+                      value="found" 
+                      class="type-choice-radio">
+                    <div class="type-icon-box type-icon-found" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <polyline points="9 11 12 14 15 11"></polyline>
+                      </svg>
+                    </div>
+                    <div class="type-content">
+                      <span class="type-title">Report a Found Item</span>
+                      <span class="type-desc">I discovered unattended property on campus.</span>
+                    </div>
+                  </label>
+
+                </div>
+              </div>
+
+              <hr class="form-section-divider">
+
+              <!-- SECTION B: Basic Item Information -->
+              <div class="form-section-legend">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+                Item Details
+              </div>
+
+              <!-- Item Name -->
+              <div class="form-group">
+                <label for="itemName" class="form-label form-label-required">Item Name</label>
+                <input 
+                  type="text" 
+                  id="itemName" 
+                  name="itemName" 
+                  class="form-control" 
+                  placeholder="e.g. Blue Hydro Flask Water Bottle or Sony Wireless Earbuds" 
+                  required>
+                <span class="form-hint">Be clear and specific with the make, model, or general name.</span>
+              </div>
+
+              <!-- Category & Approximate Location (2 Columns) -->
+              <div class="form-grid-2">
+                
+                <!-- Category Dropdown -->
+                <div class="form-group">
+                  <label for="itemCategory" class="form-label form-label-required">Category</label>
+                  <select id="itemCategory" name="itemCategory" class="form-control form-select" required>
+                    <option value="" disabled selected>Select category...</option>
+                    <option value="electronics">Electronics (Earbuds, Calculators, Phones)</option>
+                    <option value="id-cards">ID Cards &amp; University Badges</option>
+                    <option value="bags">Bags, Backpacks &amp; Sleeves</option>
+                    <option value="accessories">Accessories (Bottles, Glasses, Wallets)</option>
+                    <option value="books">Books &amp; Stationery</option>
+                    <option value="clothing">Clothing &amp; Apparel</option>
+                    <option value="others">Other Miscellaneous</option>
+                  </select>
+                </div>
+
+                <!-- Approximate Location Dropdown -->
+                <div class="form-group">
+                  <label for="itemLocation" id="locationFieldLabel" class="form-label form-label-required">
+                    Approximate Location Last Seen
+                  </label>
+                  <select id="itemLocation" name="itemLocation" class="form-control form-select" required>
+                    <option value="" disabled selected>Select campus area...</option>
+                    <option value="library">Central Library (Stacks, Reading Halls, Desks)</option>
+                    <option value="cafeteria">Student Cafeteria &amp; Dining Hall</option>
+                    <option value="academic-block">Main Academic Block &amp; Lecture Halls</option>
+                    <option value="sports-complex">Sports Complex, Courts &amp; Gymnasium</option>
+                    <option value="laboratory">Science &amp; Engineering Laboratories</option>
+                    <option value="hostel">Campus Hostels &amp; Residential Quads</option>
+                    <option value="other">General Parking / Outdoor Lawns</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <!-- Date & Item Colour (2 Columns) -->
+              <div class="form-grid-2">
+                
+                <!-- Date Lost / Found -->
+                <div class="form-group">
+                  <label for="itemDate" id="dateFieldLabel" class="form-label form-label-required">
+                    Date Lost
+                  </label>
+                  <input 
+                    type="date" 
+                    id="itemDate" 
+                    name="itemDate" 
+                    class="form-control" 
+                    required>
+                </div>
+
+                <!-- Item Colour -->
+                <div class="form-group">
+                  <label for="itemColour" class="form-label">Item Colour</label>
+                  <input 
+                    type="text" 
+                    id="itemColour" 
+                    name="itemColour" 
+                    class="form-control" 
+                    placeholder="e.g. Navy Blue, Matte Black, Silver">
+                </div>
+
+              </div>
+
+              <!-- Detailed Description -->
+              <div class="form-group">
+                <label for="itemDescription" class="form-label form-label-required">Description</label>
+                <textarea 
+                  id="itemDescription" 
+                  name="itemDescription" 
+                  class="form-control form-textarea" 
+                  placeholder="Describe the item, general condition, approximate time of loss/discovery, and surrounding circumstances..." 
+                  required></textarea>
+              </div>
+
+              <!-- Identifying Features -->
+              <div class="form-group">
+                <label for="identifyingFeatures" class="form-label">Identifying Features</label>
+                <textarea 
+                  id="identifyingFeatures" 
+                  name="identifyingFeatures" 
+                  class="form-control" 
+                  style="min-height: 80px;" 
+                  placeholder="Distinguishing marks: custom stickers, specific keychain, engraving, lock screen wallpaper, scratches..."></textarea>
+                <span class="form-hint">Helps campus security confirm genuine ownership during claim verification.</span>
+              </div>
+
+              <hr class="form-section-divider">
+
+              <!-- SECTION C: Image Upload & Preview -->
+              <div class="form-section-legend">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                Item Photograph (Optional)
+              </div>
+
+              <div class="form-group">
+                <div class="file-upload-dropzone" id="fileDropzone">
+                  <input 
+                    type="file" 
+                    id="itemImage" 
+                    name="itemImage" 
+                    class="file-input-hidden" 
+                    accept="image/*" 
+                    aria-label="Upload item image">
+                  
+                  <svg class="dropzone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                  </svg>
+                  <span class="dropzone-main-text">Click to browse or drop an image here</span>
+                  <span class="dropzone-sub-text">PNG, JPG or JPEG up to 5MB. Stored locally in browser.</span>
+                </div>
+
+                <!-- Live Client-Side Image Preview -->
+                <div class="image-preview-container" id="imagePreviewContainer" role="region" aria-label="Selected image preview">
+                  <div class="preview-thumbnail-wrap">
+                    <img id="previewThumbnailImg" src="" alt="Selected item preview" class="preview-thumbnail-img">
+                    <div>
+                      <div class="preview-filename" id="previewFilename">image.jpg</div>
+                      <div class="preview-filesize" id="previewFilesize">0 KB</div>
+                    </div>
+                  </div>
+                  <button type="button" id="removePreviewBtn" class="btn-remove-preview" aria-label="Remove selected image">
+                    Remove
+                  </button>
+                </div>
+              </div>
+
+              <hr class="form-section-divider">
+
+              <!-- SECTION D: Contact & Privacy -->
+              <div class="form-section-legend">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Contact Preference (Optional)
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Contact Email</label>
+                <input 
+                  type="email" 
+                  id="contactEmail" 
+                  name="contactEmail" 
+                  class="form-control" 
+                  placeholder="e.g. student.id@college.edu">
+                <span class="form-hint">Used only for claim coordination notifications. Never displayed publicly.</span>
+              </div>
+
+              <!-- Privacy Notice Box -->
+              <div class="privacy-notice-box">
+                <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <div>
+                  <strong>Privacy &amp; Safety Note:</strong> Your personal contact details are never shown on public item feeds. Ownership claims are arranged through verified campus desk checkpoints.
+                </div>
+              </div>
+
+              <!-- Form Submit Actions -->
+              <div class="form-submit-actions">
+                <a href="dashboard.html" class="btn btn-secondary">
+                  Cancel
+                </a>
+                <button type="submit" id="submitReportBtn" class="btn btn-primary btn-lg">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                  <span id="submitBtnText">Submit Missing Item Report</span>
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. Submission Confirmation Modal (Local Prototype Dialog)
+         ====================================================================== -->
+    <div class="report-modal-backdrop" id="reportSuccessModal" aria-hidden="true"></div>
+    <div class="report-modal-dialog" id="reportModalDialog" role="dialog" aria-modal="true" aria-labelledby="modalConfirmTitle">
+      
+      <div class="modal-icon-wrap" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h2 id="modalConfirmTitle" class="modal-title">Report Registered!</h2>
+      
+      <!-- Explicit Prompt Required Disclaimer -->
+      <p class="modal-message">
+        Your demo report has been submitted locally. It has not been published to a live campus database.
+      </p>
+
+      <div class="modal-demo-callout">
+        <strong>Prototype Demonstration Notice:</strong> This report is saved in your local browser session for presentation purposes. It does not initiate an official university police or security inquiry.
+      </div>
+
+      <!-- Item Summary Box -->
+      <div class="modal-summary-card">
+        <div class="modal-summary-row">
+          <span style="color: var(--text-muted);">Reference Ref:</span>
+          <strong id="modalSummaryRef">DEMO-0000</strong>
+        </div>
+        <div class="modal-summary-row">
+          <span style="color: var(--text-muted);">Item Name:</span>
+          <strong id="modalSummaryName">-</strong>
+        </div>
+        <div class="modal-summary-row">
+          <span style="color: var(--text-muted);">Report Type:</span>
+          <span id="modalSummaryType" class="badge badge-lost">Missing</span>
+        </div>
+        <div class="modal-summary-row">
+          <span style="color: var(--text-muted);">Category:</span>
+          <strong id="modalSummaryCategory">-</strong>
+        </div>
+        <div class="modal-summary-row">
+          <span style="color: var(--text-muted);">Campus Location:</span>
+          <strong id="modalSummaryLocation">-</strong>
+        </div>
+        <div class="modal-summary-row">
+          <span style="color: var(--text-muted);">Report Date:</span>
+          <strong id="modalSummaryDate">-</strong>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <a href="dashboard.html" class="btn btn-primary">
+          View on Dashboard
+        </a>
+        <button type="button" id="resetFormBtn" class="btn btn-secondary">
+          Submit Another Report
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ======================================================================
+       Footer (Consistent Across Platform)
+       ====================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & Overview -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand-logo-wrap" aria-label="FindIt Home">
+            <img src="assets/icons/findit-logo.png" alt="FindIt Logo" class="nav-brand-logo" width="32" height="32">
+            <span class="footer-brand-title">FindIt</span>
+          </a>
+          <p class="footer-tagline">"Lost Something? Find It. Found Something? Return It."</p>
+          <p class="footer-summary">
+            A centralized Lost &amp; Found web platform prototype designed for college campus environments using clean native web technologies.
+          </p>
+          <div class="footer-academic-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            <span>Academic Web Development Project</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Navigation</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="dashboard.html" class="footer-link">Locate It (Dashboard)</a></li>
+            <li><a href="report.html" class="footer-link">Report an Item</a></li>
+            <li><a href="closed-reports.html" class="footer-link">Closed Reports Archive</a></li>
+            <li><a href="contact.html" class="footer-link">Campus Contact Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Platform Resources -->
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Platform</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html#how-it-works" class="footer-link">How It Works</a></li>
+            <li><a href="dashboard.html" class="footer-link">Active Campus Feed</a></li>
+            <li><a href="closed-reports.html" class="footer-link">Resolution Statistics</a></li>
+            <li><a href="contact.html" class="footer-link">Verification Guidelines</a></li>
+            <li><a href="contact.html" class="footer-link">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Campus Support & Drop-off Desks -->
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Campus Support</h3>
+          <div class="footer-support-info">
+            <div class="footer-support-row">
+              <svg class="footer-support-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span><strong>Central Custody Desk:</strong> Administration Building, Ground Floor Quad</span>
+            </div>
+            <div class="footer-support-row">
+              <svg class="footer-support-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span><strong>Hours:</strong> Mon – Fri, 9:00 AM – 5:00 PM</span>
+            </div>
+            <div class="footer-support-row">
+              <svg class="footer-support-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="M7 15h0M2 9.5h20"></path>
+              </svg>
+              <span><strong>Drop-off Points:</strong> Library Entrance Desk &amp; Campus Security Posts</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-outline btn-sm" style="width: 100%;">
+            View Support &amp; Locations
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 FindIt Campus Platform. All rights reserved.
+        </div>
+        <div>
+          <span>Demonstration prototype for academic evaluation. Uses simulated campus records.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global & Form Client Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

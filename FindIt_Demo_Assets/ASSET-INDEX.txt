@@ -1,0 +1,7 @@
+FindIt asset quick reference
+
+Hero: assets/images/banners/campus-hero.jpg
+Logo: assets/icons/findit-logo.png
+Items: assets/images/items/
+Illustrations/backgrounds: assets/images/illustrations/
+Navigation icon samples: assets/icons/

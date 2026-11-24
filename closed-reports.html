@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Closed Reports — FindIt. Browse historical lost and found records successfully resolved and returned on campus.">
+  <title>Closed Reports – FindIt Campus Platform</title>
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Shared Components Stylesheet (Navbar & Footer) -->
+  <link rel="stylesheet" href="css/landing.css">
+  <!-- Dashboard Card Styles -->
+  <link rel="stylesheet" href="css/dashboard.css">
+  <!-- Consolidated Responsive Stylesheet -->
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       1. Navigation Bar
+       ====================================================================== -->
+  <header class="navbar" role="banner">
+    <div class="container navbar-container">
+      <!-- FindIt Brand Logo -->
+      <a href="index.html" class="nav-brand" aria-label="FindIt Campus Platform Home">
+        <img src="assets/icons/findit-logo.png" alt="FindIt Logo" class="nav-brand-logo" width="36" height="36">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">FindIt</span>
+          <span class="nav-brand-tagline">Campus Lost &amp; Found</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Locate It</a>
+        <a href="report.html" class="nav-link">Report It</a>
+        <a href="closed-reports.html" class="nav-link active" aria-current="page">Closed Reports</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Desktop Action CTA -->
+      <div class="nav-actions">
+        <a href="dashboard.html" class="btn btn-primary btn-sm nav-dashboard-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          Dashboard Feed
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavMenu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-in Drawer & Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-menu" id="mobileNavMenu" role="dialog" aria-label="Mobile Navigation Menu">
+    <div class="mobile-nav-header">
+      <div class="nav-brand">
+        <img src="assets/icons/findit-logo.png" alt="FindIt Logo" class="nav-brand-logo" width="32" height="32">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">FindIt</span>
+          <span class="nav-brand-tagline">Campus Platform</span>
+        </div>
+      </div>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="dashboard.html" class="mobile-nav-link">Locate It (Dashboard)</a>
+      <a href="report.html" class="mobile-nav-link">Report an Item</a>
+      <a href="closed-reports.html" class="mobile-nav-link active" aria-current="page">Closed Reports</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    </nav>
+    <div class="mobile-nav-actions">
+      <a href="dashboard.html" class="btn btn-primary btn-block">
+        Open Dashboard
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ======================================================================
+         2. Page Header & Summary Section
+         ====================================================================== -->
+    <section class="dashboard-header-section" aria-labelledby="closed-heading">
+      <div class="container">
+        
+        <div class="dashboard-title-area">
+          <span class="section-tag">Resolution Archive</span>
+          <h1 id="closed-heading" class="dashboard-main-title">Closed Reports</h1>
+          <p class="dashboard-subtitle">
+            Explore previously reported items that have been successfully reunited with their owners across our college community.
+          </p>
+        </div>
+
+        <!-- Summary Section (Demonstration Values) -->
+        <div class="dashboard-kpi-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 640px;">
+          
+          <!-- Total Closed Reports -->
+          <div class="kpi-card">
+            <div class="kpi-icon-wrap kpi-icon-recovered" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div class="kpi-content">
+              <span class="kpi-value">86</span>
+              <span class="kpi-label">Total Closed Reports</span>
+            </div>
+          </div>
+
+          <!-- Recently Recovered -->
+          <div class="kpi-card">
+            <div class="kpi-icon-wrap kpi-icon-found" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="kpi-content">
+              <span class="kpi-value">12</span>
+              <span class="kpi-label">Recently Recovered (This Month)</span>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="kpi-note">
+          * Sample demonstration records for academic prototype evaluation. All claimant identities remain private.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. Recovered Sample Records Grid
+         ====================================================================== -->
+    <section class="dashboard-sections-wrap" style="padding-top: var(--space-8);" aria-label="Closed and Recovered Items List">
+      <div class="container">
+        
+        <!-- Demonstration Disclaimer Banner -->
+        <div class="demo-notice-banner" role="note" style="margin-bottom: var(--space-8);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span><strong>Privacy &amp; Resolution Policy:</strong> Reunited items are archived to showcase community transparency. To protect students, personal names and identifying serial numbers are strictly withheld.</span>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="dashboard-cards-grid">
+          
+          <!-- Card 1: Navy Pullover Hoodie -->
+          <article class="dash-item-card" aria-label="Navy College Hoodie successfully recovered">
+            <div class="dash-card-thumb-wrap">
+              <img src="assets/images/items/hoodie.jpg" alt="Navy blue college pullover hoodie" class="dash-card-thumb" width="320" height="180" loading="lazy">
+              <div class="dash-card-badge">
+                <span class="badge badge-resolved">
+                  <span class="badge-dot"></span> Recovered
+                </span>
+              </div>
+            </div>
+            <div class="dash-card-body">
+              <span class="dash-card-category">Clothing &amp; Apparel</span>
+              <h2 class="dash-card-title">Navy College Pullover Hoodie</h2>
+              <div class="dash-card-meta">
+                <div class="dash-meta-row">
+                  <svg class="dash-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Sports Complex, Court #1</span>
+                </div>
+                <div class="dash-meta-row">
+                  <svg class="dash-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Original Report: 2 weeks ago</span>
+                </div>
+              </div>
+              <div class="dash-card-footer">
+                <span class="badge badge-resolved" style="width: 100%; justify-content: center; padding: var(--space-2);">
+                  ✔ Returned to Owner
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Ballpoint Pen Set -->
+          <article class="dash-item-card" aria-label="Metallic Ballpoint Pen Set successfully recovered">
+            <div class="dash-card-thumb-wrap">
+              <img src="assets/images/items/pen.jpg" alt="Metallic silver ballpoint pen in protective sleeve" class="dash-card-thumb" width="320" height="180" loading="lazy">
+              <div class="dash-card-badge">
+                <span class="badge badge-resolved">
+                  <span class="badge-dot"></span> Recovered
+                </span>
+              </div>
+            </div>
+            <div class="dash-card-body">
+              <span class="dash-card-category">Books &amp; Stationery</span>
+              <h2 class="dash-card-title">Metallic Ballpoint Pen Set</h2>
+              <div class="dash-card-meta">
+                <div class="dash-meta-row">
+                  <svg class="dash-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Central Library, 2nd Fl Stacks</span>
+                </div>
+                <div class="dash-meta-row">
+                  <svg class="dash-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Original Report: 10 days ago</span>
+                </div>
+              </div>
+              <div class="dash-card-footer">
+                <span class="badge badge-resolved" style="width: 100%; justify-content: center; padding: var(--space-2);">
+                  ✔ Returned to Owner
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Campus Baseball Cap -->
+          <article class="dash-item-card" aria-label="Campus Baseball Cap successfully recovered">
+            <div class="dash-card-thumb-wrap">
+              <img src="assets/images/items/cap.jpg" alt="Black canvas baseball cap with embroidered brim" class="dash-card-thumb" width="320" height="180" loading="lazy">
+              <div class="dash-card-badge">
+                <span class="badge badge-resolved">
+                  <span class="badge-dot"></span> Recovered
+                </span>
+              </div>
+            </div>
+            <div class="dash-card-body">
+              <span class="dash-card-category">Clothing &amp; Accessories</span>
+              <h2 class="dash-card-title">Black Campus Baseball Cap</h2>
+              <div class="dash-card-meta">
+                <div class="dash-meta-row">
+                  <svg class="dash-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Student Cafeteria, Booth #8</span>
+                </div>
+                <div class="dash-meta-row">
+                  <svg class="dash-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Original Report: 12 days ago</span>
+                </div>
+              </div>
+              <div class="dash-card-footer">
+                <span class="badge badge-resolved" style="width: 100%; justify-content: center; padding: var(--space-2);">
+                  ✔ Returned to Owner
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Compact Rain Umbrella -->
+          <article class="dash-item-card" aria-label="Folding Umbrella successfully recovered">
+            <div class="dash-card-thumb-wrap">
+              <img src="assets/images/items/umbrella.jpg" alt="Collapsible dark navy rain umbrella" class="dash-card-thumb" width="320" height="180" loading="lazy">
+              <div class="dash-card-badge">
+                <span class="badge badge-resolved">
+                  <span class="badge-dot"></span> Recovered
+                </span>
+              </div>
+            </div>
+            <div class="dash-card-body">
+              <span class="dash-card-category">Accessories</span>
+              <h2 class="dash-card-title">Collapsible Rain Umbrella</h2>
+              <div class="dash-card-meta">
+                <div class="dash-meta-row">
+                  <svg class="dash-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Main Academic Block Entrance</span>
+                </div>
+                <div class="dash-meta-row">
+                  <svg class="dash-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Original Report: 3 weeks ago</span>
+                </div>
+              </div>
+              <div class="dash-card-footer">
+                <span class="badge badge-resolved" style="width: 100%; justify-content: center; padding: var(--space-2);">
+                  ✔ Returned to Owner
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Engineering Textbook -->
+          <article class="dash-item-card" aria-label="Engineering Textbook successfully recovered">
+            <div class="dash-card-thumb-wrap">
+              <img src="assets/images/items/books.jpg" alt="Hardcover engineering mechanics textbook" class="dash-card-thumb" width="320" height="180" loading="lazy">
+              <div class="dash-card-badge">
+                <span class="badge badge-resolved">
+                  <span class="badge-dot"></span> Recovered
+                </span>
+              </div>
+            </div>
+            <div class="dash-card-body">
+              <span class="dash-card-category">Books &amp; Stationery</span>
+              <h2 class="dash-card-title">Engineering Mechanics Book</h2>
+              <div class="dash-card-meta">
+                <div class="dash-meta-row">
+                  <svg class="dash-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Academic Block, Room 204</span>
+                </div>
+                <div class="dash-meta-row">
+                  <svg class="dash-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Original Report: 2 weeks ago</span>
+                </div>
+              </div>
+              <div class="dash-card-footer">
+                <span class="badge badge-resolved" style="width: 100%; justify-content: center; padding: var(--space-2);">
+                  ✔ Returned to Owner
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Over-Ear Headphones -->
+          <article class="dash-item-card" aria-label="Wireless Headphones successfully recovered">
+            <div class="dash-card-thumb-wrap">
+              <img src="assets/images/items/headphones.jpg" alt="Over-ear noise-canceling silver headphones" class="dash-card-thumb" width="320" height="180" loading="lazy">
+              <div class="dash-card-badge">
+                <span class="badge badge-resolved">
+                  <span class="badge-dot"></span> Recovered
+                </span>
+              </div>
+            </div>
+            <div class="dash-card-body">
+              <span class="dash-card-category">Electronics</span>
+              <h2 class="dash-card-title">Wireless Over-Ear Headphones</h2>
+              <div class="dash-card-meta">
+                <div class="dash-meta-row">
+                  <svg class="dash-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Student Cafeteria Corner</span>
+                </div>
+                <div class="dash-meta-row">
+                  <svg class="dash-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Original Report: 1 week ago</span>
+                </div>
+              </div>
+              <div class="dash-card-footer">
+                <span class="badge badge-resolved" style="width: 100%; justify-content: center; padding: var(--space-2);">
+                  ✔ Returned to Owner
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Action Link to Main Dashboard -->
+        <div style="text-align: center; margin-top: var(--space-12);">
+          <a href="dashboard.html" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Return to Active Dashboard Feed
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       Footer (Consistent Across Platform)
+       ====================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & Overview -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand-logo-wrap" aria-label="FindIt Home">
+            <img src="assets/icons/findit-logo.png" alt="FindIt Logo" class="nav-brand-logo" width="32" height="32">
+            <span class="footer-brand-title">FindIt</span>
+          </a>
+          <p class="footer-tagline">"Lost Something? Find It. Found Something? Return It."</p>
+          <p class="footer-summary">
+            A centralized Lost &amp; Found web platform prototype designed for college campus environments using clean native web technologies.
+          </p>
+          <div class="footer-academic-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            <span>Academic Web Development Project</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Navigation</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="dashboard.html" class="footer-link">Locate It (Dashboard)</a></li>
+            <li><a href="report.html" class="footer-link">Report an Item</a></li>
+            <li><a href="closed-reports.html" class="footer-link">Closed Reports Archive</a></li>
+            <li><a href="contact.html" class="footer-link">Campus Contact Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Platform Resources -->
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Platform</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html#how-it-works" class="footer-link">How It Works</a></li>
+            <li><a href="dashboard.html" class="footer-link">Active Campus Feed</a></li>
+            <li><a href="closed-reports.html" class="footer-link">Resolution Statistics</a></li>
+            <li><a href="contact.html" class="footer-link">Verification Guidelines</a></li>
+            <li><a href="contact.html" class="footer-link">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Campus Support & Drop-off Desks -->
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Campus Support</h3>
+          <div class="footer-support-info">
+            <div class="footer-support-row">
+              <svg class="footer-support-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span><strong>Central Custody Desk:</strong> Administration Building, Ground Floor Quad</span>
+            </div>
+            <div class="footer-support-row">
+              <svg class="footer-support-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span><strong>Hours:</strong> Mon – Fri, 9:00 AM – 5:00 PM</span>
+            </div>
+            <div class="footer-support-row">
+              <svg class="footer-support-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="M7 15h0M2 9.5h20"></path>
+              </svg>
+              <span><strong>Drop-off Points:</strong> Library Entrance Desk &amp; Campus Security Posts</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-outline btn-sm" style="width: 100%;">
+            View Support &amp; Locations
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 FindIt Campus Platform. All rights reserved.
+        </div>
+        <div>
+          <span>Demonstration prototype for academic evaluation. Uses simulated campus records.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

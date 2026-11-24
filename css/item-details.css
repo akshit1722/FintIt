@@ -1,0 +1,427 @@
+/* ==========================================================================
+   FindIt — Lost & Found Campus Platform
+   Item Details & Ownership Claim Stylesheet
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Page Layout & Breadcrumb Navigation
+   -------------------------------------------------------------------------- */
+.item-details-section {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-16);
+  background-color: var(--background);
+  min-height: calc(100vh - 200px);
+}
+
+.details-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-bottom: var(--space-6);
+}
+
+.details-breadcrumb a {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.details-breadcrumb a:hover {
+  color: var(--primary);
+}
+
+.details-breadcrumb-separator {
+  color: var(--border);
+}
+
+/* Two-Column Responsive Layout */
+.item-details-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   2. Left Column: Media & Custody Security Cards
+   -------------------------------------------------------------------------- */
+.item-media-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.item-main-photo-card {
+  position: relative;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.item-photo-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background-color: var(--surface-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.item-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-photo-status-badge {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 2;
+  font-size: var(--text-sm);
+  padding: 0.35rem 0.85rem;
+}
+
+/* Custody & Verification Card */
+.custody-info-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-xs);
+}
+
+.custody-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.custody-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--primary);
+}
+
+.custody-card-title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.custody-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.custody-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.custody-step-num {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  font-weight: var(--weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.7rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. Right Column: Item Information & Action Panels
+   -------------------------------------------------------------------------- */
+.item-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.item-main-header-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.item-meta-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.item-id-tag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-weight: var(--weight-semibold);
+}
+
+.item-detail-title {
+  font-size: clamp(1.6rem, 2.5vw + 0.5rem, 2.25rem);
+  font-weight: var(--weight-extrabold);
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+}
+
+/* Metadata Grid Rows */
+.item-meta-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  background-color: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.meta-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meta-detail-label {
+  font-size: 0.6875rem;
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.meta-detail-value {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* Full Description Block */
+.detail-content-block {
+  margin-bottom: var(--space-6);
+}
+
+.detail-block-title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: var(--navy);
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.detail-block-text {
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  line-height: var(--leading-relaxed);
+}
+
+/* Identifying Details & Privacy Box */
+.identifying-details-box {
+  background-color: #F8FAFC;
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.identifying-details-text {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-2);
+}
+
+.identifying-security-alert {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* --------------------------------------------------------------------------
+   4. Claim Request Form Card (For Found Items)
+   -------------------------------------------------------------------------- */
+.claim-action-card {
+  background-color: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+}
+
+.claim-card-header {
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.claim-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  background-color: var(--success-light);
+  color: var(--success-dark);
+  border: 1px solid var(--success-border);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-2);
+}
+
+.claim-card-title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--navy);
+  margin-bottom: var(--space-1);
+}
+
+.claim-card-subtitle {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* Missing Item Alternative Callout Card */
+.missing-alternative-card {
+  background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%);
+  border: 1.5px solid var(--primary-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.missing-alt-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.missing-alt-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-lg);
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--primary-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.missing-alt-title {
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  color: var(--navy);
+  margin-bottom: var(--space-1);
+}
+
+.missing-alt-desc {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* --------------------------------------------------------------------------
+   5. Item Not Found / Error State
+   -------------------------------------------------------------------------- */
+.item-not-found-container {
+  display: none;
+  background-color: var(--surface);
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-12) var(--space-6);
+  text-align: center;
+  max-width: 540px;
+  margin: var(--space-12) auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.item-not-found-icon-wrap {
+  width: 68px;
+  height: 68px;
+  border-radius: var(--radius-full);
+  background-color: var(--danger-light);
+  color: var(--danger);
+  border: 1px solid var(--danger-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+
+.item-not-found-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--navy);
+  margin-bottom: var(--space-2);
+}
+
+.item-not-found-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+/* --------------------------------------------------------------------------
+   6. Responsive Layout Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .item-details-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .item-photo-wrapper {
+    height: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .item-meta-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .item-photo-wrapper {
+    height: 240px;
+  }
+
+  .item-main-header-card,
+  .claim-action-card,
+  .missing-alternative-card {
+    padding: var(--space-5);
+  }
+}

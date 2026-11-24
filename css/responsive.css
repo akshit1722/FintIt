@@ -1,0 +1,154 @@
+/* ==========================================================================
+   FindIt — Lost & Found Campus Platform
+   Consolidated Responsive Breakpoints & Adaptive Layouts
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Large Desktop Breakpoint (> 1200px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1201px) {
+  .hero-wrapper {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-20);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Standard Desktop / Small Laptop (1024px to 1200px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .grid-cols-4 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Tablet Landscape & Portrait (768px to 1023px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .container {
+    max-width: 720px;
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  /* Grid adaptations */
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Section Spacing adjustments */
+  .section-header {
+    margin-bottom: var(--space-6);
+  }
+
+  .section-header-center {
+    margin-bottom: var(--space-8);
+  }
+
+  /* Tablet-specific visibility */
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Mobile Devices (< 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  /* Typography Scale refinement for handheld reading */
+  h1 {
+    font-size: var(--text-2xl);
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+  }
+
+  .section-subtitle {
+    font-size: var(--text-sm);
+  }
+
+  /* Container padding */
+  .container,
+  .container-sm,
+  .container-lg,
+  .container-fluid {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  /* Single-column grid fallback */
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Layout Stacking */
+  .stack-on-mobile {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .stack-on-mobile > * {
+    width: 100% !important;
+  }
+
+  /* Card padding reduction */
+  .card-body {
+    padding: var(--space-4);
+  }
+
+  .card-header,
+  .card-footer {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  /* Buttons on mobile */
+  .btn-mobile-block {
+    width: 100%;
+  }
+
+  /* Mobile Visibility Utilities */
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .show-mobile-only {
+    display: block !important;
+  }
+
+  .show-mobile-flex {
+    display: flex !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Extra Small Devices (< 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  :root {
+    --space-4: 0.875rem; /* 14px */
+    --space-6: 1.25rem;  /* 20px */
+  }
+
+  .btn {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-sm);
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+}

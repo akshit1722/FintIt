@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FindIt — A centralized campus Lost & Found platform for students, faculty and staff. Report lost belongings, register found items, and submit claims.">
+  <title>FindIt – Lost &amp; Found Campus Platform</title>
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Landing Page Stylesheet -->
+  <link rel="stylesheet" href="css/landing.css">
+  <!-- Consolidated Responsive Stylesheet -->
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       1. Navigation Bar (Sticky, Clean Light Surface, Accessible)
+       ====================================================================== -->
+  <header class="navbar" role="banner">
+    <div class="container navbar-container">
+      <!-- FindIt Brand Logo & Identity -->
+      <a href="index.html" class="nav-brand" aria-label="FindIt Campus Platform Home">
+        <img src="assets/icons/findit-logo.png" alt="FindIt Logo" class="nav-brand-logo" width="36" height="36">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">FindIt</span>
+          <span class="nav-brand-tagline">Campus Lost &amp; Found</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+        <a href="dashboard.html" class="nav-link">Locate It</a>
+        <a href="report.html" class="nav-link">Report It</a>
+        <a href="closed-reports.html" class="nav-link">Closed Reports</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Desktop Action CTA -->
+      <div class="nav-actions">
+        <a href="dashboard.html" class="btn btn-primary btn-sm nav-dashboard-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          Dashboard
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavMenu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-in Drawer & Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-menu" id="mobileNavMenu" role="dialog" aria-label="Mobile Navigation Menu">
+    <div class="mobile-nav-header">
+      <div class="nav-brand">
+        <img src="assets/icons/findit-logo.png" alt="FindIt Logo" class="nav-brand-logo" width="32" height="32">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">FindIt</span>
+          <span class="nav-brand-tagline">Campus Platform</span>
+        </div>
+      </div>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link active" aria-current="page">Home</a>
+      <a href="dashboard.html" class="mobile-nav-link">Locate It</a>
+      <a href="report.html" class="mobile-nav-link">Report It</a>
+      <a href="closed-reports.html" class="mobile-nav-link">Closed Reports</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    </nav>
+    <div class="mobile-nav-actions">
+      <a href="dashboard.html" class="btn btn-primary btn-block">
+        Open Dashboard
+      </a>
+      <a href="report.html" class="btn btn-secondary btn-block">
+        Report an Item
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ======================================================================
+         2. Hero Section
+         ====================================================================== -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <!-- Decorative background effects -->
+      <div class="hero-bg-accent" aria-hidden="true"></div>
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <div class="hero-grid">
+          
+          <!-- Left: Hero Content -->
+          <div class="hero-content">
+            <div class="hero-tag">
+              <span class="hero-tag-pulse" aria-hidden="true"></span>
+              Centralized Campus Hub
+            </div>
+
+            <h1 id="hero-heading" class="hero-title">
+              Lost Something? <span class="hero-title-accent">Find It.</span>
+            </h1>
+
+            <p class="hero-description">
+              Your campus, connected. Discover lost and found belongings, report missing items and help reunite people with what matters.
+            </p>
+
+            <!-- Primary & Secondary CTA Buttons -->
+            <div class="hero-actions">
+              <a href="dashboard.html" class="btn btn-primary btn-lg hero-btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                Locate an Item
+              </a>
+              <a href="report.html" class="btn btn-secondary btn-lg hero-btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Report an Item
+              </a>
+            </div>
+
+            <!-- Trust-Oriented Supporting Line -->
+            <div class="hero-trust">
+              <svg class="hero-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>A smarter way to connect lost belongings with their owners.</span>
+            </div>
+          </div>
+
+          <!-- Right: Hero Visual Composition with Campus Objects -->
+          <div class="hero-visual-wrapper" aria-label="Visual composition showing recently reported campus belongings">
+            <!-- Organic soft backdrop blur shape -->
+            <div class="hero-visual-backdrop" aria-hidden="true"></div>
+
+            <!-- Central Anchor Card (Backpack) -->
+            <div class="visual-card-main">
+              <div class="visual-main-image-wrap">
+                <img src="assets/images/items/backpack.jpg" alt="Black commuter backpack with grey straps" class="visual-main-image" width="320" height="190">
+                <div class="visual-main-badge">
+                  <span class="badge badge-lost">
+                    <span class="badge-dot"></span> Lost Item
+                  </span>
+                </div>
+              </div>
+              <div class="visual-main-body">
+                <h2 class="visual-main-title">Campus Laptop Backpack</h2>
+                <div class="visual-main-meta">
+                  <span>📍 Central Library, 2nd Fl</span>
+                  <span>Reported Today</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Satellite Card 1: Student ID (Top Left) -->
+            <div class="satellite-card-1">
+              <img src="assets/images/items/student-id.jpg" alt="University student identification card" class="satellite-thumb" width="44" height="44">
+              <div class="satellite-info">
+                <span class="satellite-name">Campus Student ID</span>
+                <span class="satellite-sub">
+                  <span class="badge badge-lost" style="font-size: 0.65rem; padding: 2px 6px;">
+                    <span class="badge-dot"></span> Lost
+                  </span>
+                  Academic Hall
+                </span>
+              </div>
+            </div>
+
+            <!-- Satellite Card 2: Wireless Earbuds (Top Right) -->
+            <div class="satellite-card-2">
+              <img src="assets/images/items/earbuds.jpg" alt="White wireless Bluetooth earbuds in charging case" class="satellite-thumb" width="44" height="44">
+              <div class="satellite-info">
+                <span class="satellite-name">Wireless Earbuds</span>
+                <span class="satellite-sub">
+                  <span class="badge badge-found" style="font-size: 0.65rem; padding: 2px 6px;">
+                    <span class="badge-dot"></span> Found
+                  </span>
+                  Cafeteria
+                </span>
+              </div>
+            </div>
+
+            <!-- Satellite Card 3: Metallic Keys & Bottle (Bottom Right) -->
+            <div class="satellite-card-3">
+              <img src="assets/images/items/keys.jpg" alt="Set of brass locker keys with blue lanyard" class="satellite-thumb" width="44" height="44">
+              <div class="satellite-info">
+                <span class="satellite-name">Dorm Keys &amp; Lanyard</span>
+                <span class="satellite-sub">
+                  <span class="badge badge-found" style="font-size: 0.65rem; padding: 2px 6px;">
+                    <span class="badge-dot"></span> Found
+                  </span>
+                  Sports Complex
+                </span>
+              </div>
+            </div>
+
+            <!-- Floating Pill Tag: Water Bottle (Bottom Left) -->
+            <div class="floating-item-pill">
+              <img src="assets/images/items/water-bottle.jpg" alt="Steel thermal water bottle" class="floating-pill-img" width="22" height="22">
+              <span>Insulated Bottle • Found</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Quick Statistics Area
+         ====================================================================== -->
+    <section class="stats-section" aria-labelledby="stats-heading">
+      <div class="container">
+        <h2 id="stats-heading" class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Campus Platform Statistics</h2>
+        
+        <div class="stats-card-container">
+          <!-- Items Reported -->
+          <div class="stat-item">
+            <div class="stat-icon-wrapper stat-icon-reported" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number">148+</span>
+              <span class="stat-label">Items Reported</span>
+            </div>
+          </div>
+
+          <!-- Items Found -->
+          <div class="stat-item">
+            <div class="stat-icon-wrapper stat-icon-found" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number">94</span>
+              <span class="stat-label">Items Found</span>
+            </div>
+          </div>
+
+          <!-- Items Recovered -->
+          <div class="stat-item">
+            <div class="stat-icon-wrapper stat-icon-recovered" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number">86</span>
+              <span class="stat-label">Items Recovered</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="stats-disclaimer">
+          * Sample demonstration metrics for prototype preview. Does not represent live security registry records.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 1 — How FindIt Works
+         ====================================================================== -->
+    <section id="how-it-works" class="how-it-works-section" aria-labelledby="how-it-works-title">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Simple 3-Step Process</span>
+          <h2 id="how-it-works-title" class="section-title">How FindIt Works</h2>
+          <p class="section-subtitle">A seamless, reliable flow connecting lost items back to their rightful owners on campus.</p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6">
+          <!-- Step 1: Report -->
+          <div class="step-card">
+            <span class="step-badge">Step 01</span>
+            <div class="step-illustration-wrap">
+              <img src="assets/images/illustrations/checklist-illustration.png" alt="Report an item checklist illustration" class="step-illustration" width="120" height="110">
+            </div>
+            <h3 class="step-title">1. Report</h3>
+            <p class="step-desc">
+              Report an item you lost or found. Fill out a simple form detailing item characteristics, category, and where it was misplaced or discovered.
+            </p>
+          </div>
+
+          <!-- Step 2: Discover -->
+          <div class="step-card">
+            <span class="step-badge">Step 02</span>
+            <div class="step-illustration-wrap">
+              <img src="assets/images/illustrations/search-illustration.png" alt="Search and discover belongings illustration" class="step-illustration" width="120" height="110">
+            </div>
+            <h3 class="step-title">2. Discover</h3>
+            <p class="step-desc">
+              Search through available campus reports. Browse our live dashboard with real-time filters for electronics, cards, keys, and campus buildings.
+            </p>
+          </div>
+
+          <!-- Step 3: Reconnect -->
+          <div class="step-card">
+            <span class="step-badge">Step 03</span>
+            <div class="step-illustration-wrap">
+              <img src="assets/images/illustrations/handshake-illustration.png" alt="Ownership verification and return illustration" class="step-illustration" width="120" height="110">
+            </div>
+            <h3 class="step-title">3. Reconnect</h3>
+            <p class="step-desc">
+              Submit an ownership claim and arrange verification. Provide matching proof securely to coordinate a safe handover through campus security.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2 — Recently Reported Items (Demonstration Records)
+         ====================================================================== -->
+    <section class="recent-items-section" aria-labelledby="recent-items-title">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Campus Feed</span>
+          <h2 id="recent-items-title" class="section-title">Recently Reported Items</h2>
+          <p class="section-subtitle">Real-time glimpse into newly submitted lost and found reports across campus facilities.</p>
+        </div>
+
+        <!-- Demonstration Notice Banner -->
+        <div class="demo-notice-banner" role="note">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span><strong>Demonstration Records:</strong> The items below are sample prototype records designed to preview platform interactions. Locations are generic campus zones.</span>
+        </div>
+
+        <!-- 6 Item Cards Grid -->
+        <div class="recent-grid">
+          
+          <!-- Card 1: Black Wireless Earbuds -->
+          <article class="item-feed-card" aria-label="Black Wireless Earbuds found at Library">
+            <div class="item-thumb-wrapper">
+              <img src="assets/images/items/earbuds.jpg" alt="Pair of wireless black earbuds in matte charging case" class="item-thumb-img" width="360" height="200" loading="lazy">
+              <div class="item-badge-pos">
+                <span class="badge badge-found">
+                  <span class="badge-dot"></span> Found Item
+                </span>
+              </div>
+            </div>
+            <div class="item-feed-body">
+              <span class="item-category-label">Electronics</span>
+              <h3 class="item-feed-title">Black Wireless Earbuds</h3>
+              <div class="item-feed-meta">
+                <div class="item-meta-row">
+                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Central Library, Study Cubicle #14</span>
+                </div>
+                <div class="item-meta-row">
+                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Reported Today, 10:15 AM</span>
+                </div>
+              </div>
+              <div class="item-feed-footer">
+                <a href="item-details.html?id=ITEM001" class="btn btn-outline btn-sm item-view-btn">View Details &amp; Claim</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Blue Water Bottle -->
+          <article class="item-feed-card" aria-label="Blue Water Bottle lost at Academic Block">
+            <div class="item-thumb-wrapper">
+              <img src="assets/images/items/water-bottle.jpg" alt="Stainless steel thermal blue water bottle" class="item-thumb-img" width="360" height="200" loading="lazy">
+              <div class="item-badge-pos">
+                <span class="badge badge-lost">
+                  <span class="badge-dot"></span> Lost Item
+                </span>
+              </div>
+            </div>
+            <div class="item-feed-body">
+              <span class="item-category-label">Accessories</span>
+              <h3 class="item-feed-title">Blue Metal Water Bottle</h3>
+              <div class="item-feed-meta">
+                <div class="item-meta-row">
+                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Main Academic Block, Lecture Hall B</span>
+                </div>
+                <div class="item-meta-row">
+                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Reported Yesterday</span>
+                </div>
+              </div>
+              <div class="item-feed-footer">
+                <a href="item-details.html?id=ITEM002" class="btn btn-outline btn-sm item-view-btn">View Details &amp; Claim</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Student ID Card -->
+          <article class="item-feed-card" aria-label="Student ID Card found at Cafeteria">
+            <div class="item-thumb-wrapper">
+              <img src="assets/images/items/student-id.jpg" alt="University student identification card with lanyard" class="item-thumb-img" width="360" height="200" loading="lazy">
+              <div class="item-badge-pos">
+                <span class="badge badge-found">
+                  <span class="badge-dot"></span> Found Item
+                </span>
+              </div>
+            </div>
+            <div class="item-feed-body">
+              <span class="item-category-label">ID &amp; Documents</span>
+              <h3 class="item-feed-title">Campus Student ID Card</h3>
+              <div class="item-feed-meta">
+                <div class="item-meta-row">
+                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Student Cafeteria, Center Booth</span>
+                </div>
+                <div class="item-meta-row">
+                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Reported 2 Days Ago</span>
+                </div>
+              </div>
+              <div class="item-feed-footer">
+                <a href="item-details.html?id=ITEM003" class="btn btn-outline btn-sm item-view-btn">View Details &amp; Claim</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Grey Backpack -->
+          <article class="item-feed-card" aria-label="Grey Backpack lost at Sports Complex">
+            <div class="item-thumb-wrapper">
+              <img src="assets/images/items/backpack.jpg" alt="Durable grey canvas laptop backpack with dual pockets" class="item-thumb-img" width="360" height="200" loading="lazy">
+              <div class="item-badge-pos">
+                <span class="badge badge-lost">
+                  <span class="badge-dot"></span> Lost Item
+                </span>
+              </div>
+            </div>
+            <div class="item-feed-body">
+              <span class="item-category-label">Bags &amp; Luggage</span>
+              <h3 class="item-feed-title">Grey Canvas Backpack</h3>
+              <div class="item-feed-meta">
+                <div class="item-meta-row">
+                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Sports Complex, Bleachers</span>
+                </div>
+                <div class="item-meta-row">
+                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Reported 2 Days Ago</span>
+                </div>
+              </div>
+              <div class="item-feed-footer">
+                <a href="item-details.html?id=ITEM004" class="btn btn-outline btn-sm item-view-btn">View Details &amp; Claim</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Scientific Calculator -->
+          <article class="item-feed-card" aria-label="Scientific Calculator found at Laboratory">
+            <div class="item-thumb-wrapper">
+              <img src="assets/images/items/calculator.jpg" alt="Engineering scientific calculator with slide cover" class="item-thumb-img" width="360" height="200" loading="lazy">
+              <div class="item-badge-pos">
+                <span class="badge badge-found">
+                  <span class="badge-dot"></span> Found Item
+                </span>
+              </div>
+            </div>
+            <div class="item-feed-body">
+              <span class="item-category-label">Electronics</span>
+              <h3 class="item-feed-title">Scientific Calculator</h3>
+              <div class="item-feed-meta">
+                <div class="item-meta-row">
+                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Science Laboratory, Bench 4</span>
+                </div>
+                <div class="item-meta-row">
+                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Reported 3 Days Ago</span>
+                </div>
+              </div>
+              <div class="item-feed-footer">
+                <a href="item-details.html?id=ITEM005" class="btn btn-outline btn-sm item-view-btn">View Details &amp; Claim</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Black Leather Wallet -->
+          <article class="item-feed-card" aria-label="Black Leather Wallet lost at Parking Area">
+            <div class="item-thumb-wrapper">
+              <img src="assets/images/items/wallet.jpg" alt="Men's black leather bi-fold pocket wallet" class="item-thumb-img" width="360" height="200" loading="lazy">
+              <div class="item-badge-pos">
+                <span class="badge badge-lost">
+                  <span class="badge-dot"></span> Lost Item
+                </span>
+              </div>
+            </div>
+            <div class="item-feed-body">
+              <span class="item-category-label">Personal Accessories</span>
+              <h3 class="item-feed-title">Black Leather Wallet</h3>
+              <div class="item-feed-meta">
+                <div class="item-meta-row">
+                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>North Parking Area, Row D</span>
+                </div>
+                <div class="item-meta-row">
+                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Reported 4 Days Ago</span>
+                </div>
+              </div>
+              <div class="item-feed-footer">
+                <a href="item-details.html?id=ITEM006" class="btn btn-outline btn-sm item-view-btn">View Details &amp; Claim</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Section Link to Complete Dashboard -->
+        <div style="text-align: center;">
+          <a href="dashboard.html" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="8" y1="6" x2="21" y2="6"></line>
+              <line x1="8" y1="12" x2="21" y2="12"></line>
+              <line x1="8" y1="18" x2="21" y2="18"></line>
+              <line x1="3" y1="6" x2="3.01" y2="6"></line>
+              <line x1="3" y1="12" x2="3.01" y2="12"></line>
+              <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+            Explore Complete Campus Dashboard
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3 — Why FindIt? (Platform Benefits)
+         ====================================================================== -->
+    <section class="benefits-section" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Platform Values</span>
+          <h2 id="benefits-title" class="section-title">Why FindIt?</h2>
+          <p class="section-subtitle">Designed specifically for university campuses to streamline lost item recovery with trust, efficiency, and clarity.</p>
+        </div>
+
+        <div class="benefits-grid">
+          
+          <!-- Benefit 1: Centralized Reporting -->
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper benefit-icon-primary" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Centralized Reporting</h3>
+            <p class="benefit-desc">
+              One unified digital desk replaces scattered social media chats, informal messages, and physical bulletin notices across campus.
+            </p>
+          </div>
+
+          <!-- Benefit 2: Easy Item Discovery -->
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper benefit-icon-success" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Easy Item Discovery</h3>
+            <p class="benefit-desc">
+              Rapid search filters by category, building quadrant, and status enable students and faculty to pinpoint matches in seconds.
+            </p>
+          </div>
+
+          <!-- Benefit 3: Organized Claim Process -->
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper benefit-icon-warning" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <polyline points="9 12 11 14 15 10"></polyline>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Organized Claim Process</h3>
+            <p class="benefit-desc">
+              Targeted verification questions protect claimant privacy and ensure surrendered property is handed over only to the rightful owner.
+            </p>
+          </div>
+
+          <!-- Benefit 4: Community Participation -->
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper benefit-icon-info" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Community Participation</h3>
+            <p class="benefit-desc">
+              Fosters an active culture of campus honesty, accountability, and mutual assistance among students, staff, and faculty members.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4 — Call to Action (CTA)
+         ====================================================================== -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-banner-card">
+          <div class="cta-banner-bg-dots" aria-hidden="true"></div>
+          <div class="cta-content">
+            <span class="section-tag">Campus Action</span>
+            <h2 id="cta-heading" class="cta-heading">Help Someone Find What They've Lost.</h2>
+            <p class="cta-description">
+              Found a misplaced set of keys, student ID, or notebook? Registering takes less than two minutes and brings peace of mind to a fellow campus community member.
+            </p>
+            <div class="cta-button-group">
+              <a href="report.html" class="btn btn-primary btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Report an Item
+              </a>
+              <a href="dashboard.html" class="btn btn-secondary btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                Explore Reports
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       SECTION 5 — Footer
+       ====================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & Overview -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand-logo-wrap" aria-label="FindIt Home">
+            <img src="assets/icons/findit-logo.png" alt="FindIt Logo" class="nav-brand-logo" width="32" height="32">
+            <span class="footer-brand-title">FindIt</span>
+          </a>
+          <p class="footer-tagline">"Lost Something? Find It. Found Something? Return It."</p>
+          <p class="footer-summary">
+            A centralized Lost &amp; Found web platform prototype designed for college campus environments using clean native web technologies.
+          </p>
+          <div class="footer-academic-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            <span>Academic Web Development Project</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Navigation</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="dashboard.html" class="footer-link">Locate It (Dashboard)</a></li>
+            <li><a href="report.html" class="footer-link">Report an Item</a></li>
+            <li><a href="closed-reports.html" class="footer-link">Closed Reports Archive</a></li>
+            <li><a href="contact.html" class="footer-link">Campus Contact Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Platform Resources -->
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Platform</h3>
+          <ul class="footer-links-list">
+            <li><a href="#how-it-works" class="footer-link">How It Works</a></li>
+            <li><a href="dashboard.html" class="footer-link">Active Campus Feed</a></li>
+            <li><a href="closed-reports.html" class="footer-link">Resolution Statistics</a></li>
+            <li><a href="contact.html" class="footer-link">Verification Guidelines</a></li>
+            <li><a href="contact.html" class="footer-link">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Campus Support & Drop-off Desks -->
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Campus Support</h3>
+          <div class="footer-support-info">
+            <div class="footer-support-row">
+              <svg class="footer-support-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span><strong>Central Custody Desk:</strong> Administration Building, Ground Floor Quad</span>
+            </div>
+            <div class="footer-support-row">
+              <svg class="footer-support-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span><strong>Hours:</strong> Mon – Fri, 9:00 AM – 5:00 PM</span>
+            </div>
+            <div class="footer-support-row">
+              <svg class="footer-support-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="M7 15h0M2 9.5h20"></path>
+              </svg>
+              <span><strong>Drop-off Points:</strong> Library Entrance Desk &amp; Campus Security Posts</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-outline btn-sm" style="width: 100%;">
+            View Support &amp; Locations
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 FindIt Campus Platform. All rights reserved.
+        </div>
+        <div>
+          <span>Demonstration prototype for academic evaluation. Uses simulated campus records.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Client Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
