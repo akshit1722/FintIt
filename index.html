@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="css/landing.css">
   <!-- Consolidated Responsive Stylesheet -->
   <link rel="stylesheet" href="css/responsive.css">
+  <!-- Google Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 
@@ -41,12 +43,7 @@
       <!-- Desktop Action CTA -->
       <div class="nav-actions">
         <a href="dashboard.html" class="btn btn-primary btn-sm nav-dashboard-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="3" y="3" width="7" height="7"></rect>
-            <rect x="14" y="3" width="7" height="7"></rect>
-            <rect x="14" y="14" width="7" height="7"></rect>
-            <rect x="3" y="14" width="7" height="7"></rect>
-          </svg>
+          <span class="material-icons" aria-hidden="true">dashboard</span>
           Dashboard
         </a>
       </div>
@@ -119,100 +116,19 @@
             <!-- Primary & Secondary CTA Buttons -->
             <div class="hero-actions">
               <a href="dashboard.html" class="btn btn-primary btn-lg hero-btn-primary">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
+                <span class="material-icons" aria-hidden="true">search</span>
                 Locate an Item
               </a>
               <a href="report.html" class="btn btn-secondary btn-lg hero-btn-secondary">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="12" y1="5" x2="12" y2="19"></line>
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
+                <span class="material-icons" aria-hidden="true">add</span>
                 Report an Item
               </a>
             </div>
 
             <!-- Trust-Oriented Supporting Line -->
             <div class="hero-trust">
-              <svg class="hero-trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              </svg>
+              <span class="material-icons hero-trust-icon" aria-hidden="true">verified_user</span>
               <span>A smarter way to connect lost belongings with their owners.</span>
-            </div>
-          </div>
-
-          <!-- Right: Hero Visual Composition with Campus Objects -->
-          <div class="hero-visual-wrapper" aria-label="Visual composition showing recently reported campus belongings">
-            <!-- Organic soft backdrop blur shape -->
-            <div class="hero-visual-backdrop" aria-hidden="true"></div>
-
-            <!-- Central Anchor Card (Backpack) -->
-            <div class="visual-card-main">
-              <div class="visual-main-image-wrap">
-                <img src="assets/images/items/backpack.jpg" alt="Black commuter backpack with grey straps" class="visual-main-image" width="320" height="190">
-                <div class="visual-main-badge">
-                  <span class="badge badge-lost">
-                    <span class="badge-dot"></span> Lost Item
-                  </span>
-                </div>
-              </div>
-              <div class="visual-main-body">
-                <h2 class="visual-main-title">Campus Laptop Backpack</h2>
-                <div class="visual-main-meta">
-                  <span>📍 Central Library, 2nd Fl</span>
-                  <span>Reported Today</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Satellite Card 1: Student ID (Top Left) -->
-            <div class="satellite-card-1">
-              <img src="assets/images/items/student-id.jpg" alt="University student identification card" class="satellite-thumb" width="44" height="44">
-              <div class="satellite-info">
-                <span class="satellite-name">Campus Student ID</span>
-                <span class="satellite-sub">
-                  <span class="badge badge-lost" style="font-size: 0.65rem; padding: 2px 6px;">
-                    <span class="badge-dot"></span> Lost
-                  </span>
-                  Academic Hall
-                </span>
-              </div>
-            </div>
-
-            <!-- Satellite Card 2: Wireless Earbuds (Top Right) -->
-            <div class="satellite-card-2">
-              <img src="assets/images/items/earbuds.jpg" alt="White wireless Bluetooth earbuds in charging case" class="satellite-thumb" width="44" height="44">
-              <div class="satellite-info">
-                <span class="satellite-name">Wireless Earbuds</span>
-                <span class="satellite-sub">
-                  <span class="badge badge-found" style="font-size: 0.65rem; padding: 2px 6px;">
-                    <span class="badge-dot"></span> Found
-                  </span>
-                  Cafeteria
-                </span>
-              </div>
-            </div>
-
-            <!-- Satellite Card 3: Metallic Keys & Bottle (Bottom Right) -->
-            <div class="satellite-card-3">
-              <img src="assets/images/items/keys.jpg" alt="Set of brass locker keys with blue lanyard" class="satellite-thumb" width="44" height="44">
-              <div class="satellite-info">
-                <span class="satellite-name">Dorm Keys &amp; Lanyard</span>
-                <span class="satellite-sub">
-                  <span class="badge badge-found" style="font-size: 0.65rem; padding: 2px 6px;">
-                    <span class="badge-dot"></span> Found
-                  </span>
-                  Sports Complex
-                </span>
-              </div>
-            </div>
-
-            <!-- Floating Pill Tag: Water Bottle (Bottom Left) -->
-            <div class="floating-item-pill">
-              <img src="assets/images/items/water-bottle.jpg" alt="Steel thermal water bottle" class="floating-pill-img" width="22" height="22">
-              <span>Insulated Bottle • Found</span>
             </div>
           </div>
 
@@ -231,11 +147,7 @@
           <!-- Items Reported -->
           <div class="stat-item">
             <div class="stat-icon-wrapper stat-icon-reported" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              </svg>
+              <span class="material-icons">report</span>
             </div>
             <div class="stat-info">
               <span class="stat-number">148+</span>
@@ -246,10 +158,7 @@
           <!-- Items Found -->
           <div class="stat-item">
             <div class="stat-icon-wrapper stat-icon-found" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
+              <span class="material-icons">search</span>
             </div>
             <div class="stat-info">
               <span class="stat-number">94</span>
@@ -260,10 +169,7 @@
           <!-- Items Recovered -->
           <div class="stat-item">
             <div class="stat-icon-wrapper stat-icon-recovered" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
+              <span class="material-icons">check_circle</span>
             </div>
             <div class="stat-info">
               <span class="stat-number">86</span>
@@ -342,11 +248,7 @@
 
         <!-- Demonstration Notice Banner -->
         <div class="demo-notice-banner" role="note">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="16" x2="12" y2="12"></line>
-            <line x1="12" y1="8" x2="12.01" y2="8"></line>
-          </svg>
+          <span class="material-icons" aria-hidden="true">info</span>
           <span><strong>Demonstration Records:</strong> The items below are sample prototype records designed to preview platform interactions. Locations are generic campus zones.</span>
         </div>
 
@@ -368,17 +270,11 @@
               <h3 class="item-feed-title">Black Wireless Earbuds</h3>
               <div class="item-feed-meta">
                 <div class="item-meta-row">
-                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
+                  <span class="material-icons item-meta-icon" aria-hidden="true">location_on</span>
                   <span>Central Library, Study Cubicle #14</span>
                 </div>
                 <div class="item-meta-row">
-                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
+                  <span class="material-icons item-meta-icon" aria-hidden="true">schedule</span>
                   <span>Reported Today, 10:15 AM</span>
                 </div>
               </div>
@@ -403,17 +299,11 @@
               <h3 class="item-feed-title">Blue Metal Water Bottle</h3>
               <div class="item-feed-meta">
                 <div class="item-meta-row">
-                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
+                  <span class="material-icons item-meta-icon" aria-hidden="true">location_on</span>
                   <span>Main Academic Block, Lecture Hall B</span>
                 </div>
                 <div class="item-meta-row">
-                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
+                  <span class="material-icons item-meta-icon" aria-hidden="true">schedule</span>
                   <span>Reported Yesterday</span>
                 </div>
               </div>
@@ -438,17 +328,11 @@
               <h3 class="item-feed-title">Campus Student ID Card</h3>
               <div class="item-feed-meta">
                 <div class="item-meta-row">
-                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
+                  <span class="material-icons item-meta-icon" aria-hidden="true">location_on</span>
                   <span>Student Cafeteria, Center Booth</span>
                 </div>
                 <div class="item-meta-row">
-                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
+                  <span class="material-icons item-meta-icon" aria-hidden="true">schedule</span>
                   <span>Reported 2 Days Ago</span>
                 </div>
               </div>
@@ -473,17 +357,11 @@
               <h3 class="item-feed-title">Grey Canvas Backpack</h3>
               <div class="item-feed-meta">
                 <div class="item-meta-row">
-                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
+                  <span class="material-icons item-meta-icon" aria-hidden="true">location_on</span>
                   <span>Sports Complex, Bleachers</span>
                 </div>
                 <div class="item-meta-row">
-                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
+                  <span class="material-icons item-meta-icon" aria-hidden="true">schedule</span>
                   <span>Reported 2 Days Ago</span>
                 </div>
               </div>
@@ -508,17 +386,11 @@
               <h3 class="item-feed-title">Scientific Calculator</h3>
               <div class="item-feed-meta">
                 <div class="item-meta-row">
-                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
+                  <span class="material-icons item-meta-icon" aria-hidden="true">location_on</span>
                   <span>Science Laboratory, Bench 4</span>
                 </div>
                 <div class="item-meta-row">
-                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
+                  <span class="material-icons item-meta-icon" aria-hidden="true">schedule</span>
                   <span>Reported 3 Days Ago</span>
                 </div>
               </div>
@@ -543,17 +415,11 @@
               <h3 class="item-feed-title">Black Leather Wallet</h3>
               <div class="item-feed-meta">
                 <div class="item-meta-row">
-                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
+                  <span class="material-icons item-meta-icon" aria-hidden="true">location_on</span>
                   <span>North Parking Area, Row D</span>
                 </div>
                 <div class="item-meta-row">
-                  <svg class="item-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
+                  <span class="material-icons item-meta-icon" aria-hidden="true">schedule</span>
                   <span>Reported 4 Days Ago</span>
                 </div>
               </div>
@@ -568,14 +434,7 @@
         <!-- Section Link to Complete Dashboard -->
         <div style="text-align: center;">
           <a href="dashboard.html" class="btn btn-primary btn-lg">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="8" y1="6" x2="21" y2="6"></line>
-              <line x1="8" y1="12" x2="21" y2="12"></line>
-              <line x1="8" y1="18" x2="21" y2="18"></line>
-              <line x1="3" y1="6" x2="3.01" y2="6"></line>
-              <line x1="3" y1="12" x2="3.01" y2="12"></line>
-              <line x1="3" y1="18" x2="3.01" y2="18"></line>
-            </svg>
+            <span class="material-icons" aria-hidden="true">list</span>
             Explore Complete Campus Dashboard
           </a>
         </div>
@@ -598,11 +457,7 @@
           <!-- Benefit 1: Centralized Reporting -->
           <div class="benefit-card">
             <div class="benefit-icon-wrapper benefit-icon-primary" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-              </svg>
+              <span class="material-icons">desktop_windows</span>
             </div>
             <h3 class="benefit-title">Centralized Reporting</h3>
             <p class="benefit-desc">
@@ -613,12 +468,7 @@
           <!-- Benefit 2: Easy Item Discovery -->
           <div class="benefit-card">
             <div class="benefit-icon-wrapper benefit-icon-success" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                <line x1="11" y1="8" x2="11" y2="14"></line>
-                <line x1="8" y1="11" x2="14" y2="11"></line>
-              </svg>
+              <span class="material-icons">manage_search</span>
             </div>
             <h3 class="benefit-title">Easy Item Discovery</h3>
             <p class="benefit-desc">
@@ -629,10 +479,7 @@
           <!-- Benefit 3: Organized Claim Process -->
           <div class="benefit-card">
             <div class="benefit-icon-wrapper benefit-icon-warning" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                <polyline points="9 12 11 14 15 10"></polyline>
-              </svg>
+              <span class="material-icons">verified_user</span>
             </div>
             <h3 class="benefit-title">Organized Claim Process</h3>
             <p class="benefit-desc">
@@ -643,12 +490,7 @@
           <!-- Benefit 4: Community Participation -->
           <div class="benefit-card">
             <div class="benefit-icon-wrapper benefit-icon-info" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
+              <span class="material-icons">groups</span>
             </div>
             <h3 class="benefit-title">Community Participation</h3>
             <p class="benefit-desc">
@@ -675,17 +517,11 @@
             </p>
             <div class="cta-button-group">
               <a href="report.html" class="btn btn-primary btn-lg">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="12" y1="5" x2="12" y2="19"></line>
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
+                <span class="material-icons" aria-hidden="true">add</span>
                 Report an Item
               </a>
               <a href="dashboard.html" class="btn btn-secondary btn-lg">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
+                <span class="material-icons" aria-hidden="true">search</span>
                 Explore Reports
               </a>
             </div>
@@ -713,10 +549,7 @@
             A centralized Lost &amp; Found web platform prototype designed for college campus environments using clean native web technologies.
           </p>
           <div class="footer-academic-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-            </svg>
+            <span class="material-icons" aria-hidden="true" style="font-size: 14px;">school</span>
             <span>Academic Web Development Project</span>
           </div>
         </div>
@@ -750,24 +583,15 @@
           <h3 class="footer-col-title">Campus Support</h3>
           <div class="footer-support-info">
             <div class="footer-support-row">
-              <svg class="footer-support-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
+              <span class="material-icons footer-support-icon" aria-hidden="true">location_on</span>
               <span><strong>Central Custody Desk:</strong> Administration Building, Ground Floor Quad</span>
             </div>
             <div class="footer-support-row">
-              <svg class="footer-support-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
+              <span class="material-icons footer-support-icon" aria-hidden="true">schedule</span>
               <span><strong>Hours:</strong> Mon – Fri, 9:00 AM – 5:00 PM</span>
             </div>
             <div class="footer-support-row">
-              <svg class="footer-support-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                <path d="M7 15h0M2 9.5h20"></path>
-              </svg>
+              <span class="material-icons footer-support-icon" aria-hidden="true">inventory</span>
               <span><strong>Drop-off Points:</strong> Library Entrance Desk &amp; Campus Security Posts</span>
             </div>
           </div>
@@ -794,3 +618,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+ 

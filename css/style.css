@@ -860,3 +860,76 @@ b {
   margin-bottom: var(--space-6);
   border: none;
 }
+
+/* ==========================================================================
+   Google Material Icons Global Alignment & Sizing Utilities
+   ========================================================================== */
+.material-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 20px;
+  user-select: none;
+}
+
+.btn .material-icons {
+  font-size: 1.15em;
+  vertical-align: middle;
+}
+
+.btn-sm .material-icons {
+  font-size: 1rem;
+}
+
+.btn-lg .material-icons {
+  font-size: 1.25rem;
+}
+
+.dash-meta-icon,
+.item-meta-icon {
+  font-size: 14px !important;
+  width: 14px !important;
+  height: 14px !important;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-support-icon {
+  font-size: 16px !important;
+  width: 16px !important;
+  height: 16px !important;
+  line-height: 1;
+}
+
+.search-icon-prefix {
+  font-size: 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+  line-height: 1;
+}
+
+.privacy-icon {
+  font-size: 16px !important;
+  width: 16px !important;
+  height: 16px !important;
+  line-height: 1;
+}
+
+.custody-icon {
+  font-size: 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+  line-height: 1;
+}
+
+.dropzone-icon {
+  font-size: 42px !important;
+  width: 42px !important;
+  height: 42px !important;
+  line-height: 1;
+}
+
